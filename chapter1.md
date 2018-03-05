@@ -212,7 +212,7 @@ public class SwitchEx {
         case 1:
             System.out.println("미꾸미디움");
             break;
-//        case 2:
+//        case 2: //이 케이스 굳이 없어도 되는데 있는게 명시적인듯
 //            System.out.println("미꾸라지");
 //            break;
 //    
@@ -344,6 +344,141 @@ public class SwitchEx {
 
 }
 ```
+
+
+
+형변환 `(double)(Math.random())`
+
+정수 2개와 연산 기호 입력 받아서 사칙연산 수행하는 코드 만들어보는데 java에서는 if문 조건안에 문자비교 못 한다고 한다. 그래서 다른 방법 써야 한다고! 근데 js는 문자비교 되었던 것 같아서 해봤더니 된다. 
+
+```js
+x = "+"
+
+if(x == "+"){
+  console.log("Success"); //console에 "Success" 출력됨
+} 
+```
+
+
+
+```java
+//사칙연산 하는 프로그램
+
+import java.util.*;
+
+public class Ex0303 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double x, y; //나누기 생각 못하고 처음에 int로 선언했다가, double로 바꿨다. 
+		String cal;
+		
+		System.out.println("첫번째 정수를 입력하세요");
+		x = input.nextDouble(); //double 자료형 콘솔에서 입력 받으려면 nextDouble()사용 
+		
+		System.out.println("두번째 정수를 입력하세요");
+		y = input.nextDouble();
+		
+		System.out.println("처리할 연산을 입력하세요");
+		cal = input.next();
+		//위 코드 input.nextLine(); 으로 치니까 연산 문자 입력하는거 안 기다리고 '계산할 수 없습니다' 출력됨
+		// 
+		
+		
+		//if문은 == 문자 비교 안 된다 (그래서 다른 방식 써야 한다)
+		switch(cal){
+			case "+":
+				System.out.println(x+y);
+				break;
+			case "-":
+				System.out.println(x-y);
+				break;
+			case "*":
+				System.out.println(x*y);
+				break;
+			case "/":
+				System.out.println(Math.round(x/y)); //반올림은 어떻게하지? 그냥 Math.round()쓰니까 정수로 변환되는데
+				break;
+			default:
+				System.out.println("계산할 수 없습니다.");
+				break;
+			
+		}
+				
+				
+	}
+
+}
+```
+
+
+
+* 자료형 보충 \(문제 풀고 시간이 좀 남아서 자습...\)
+  * 자료형, 연산자들 뭐뭐 있는지 제대로 모른다. 
+    * 자료형 생각하니까 전에 c 보면서 c는 int 자료형이 \(컴퓨터에 따라서\) 32비트 또는 64비트로 나뉜다고 내용 봤던 것 같은데 java는 jvm으로 OS 상관없이 돌아가니까? int 크기 통일인가?
+      * 아 다 다르구나, 언어 - 컴파일이 정의하기 나름이라고?
+
+      > No,`int`in C is**not**defined to be 32 bits.`int`and`long`are not defined to be any specific size at all. The only thing the language guarantees is that`sizeof(char)<=sizeof(short)<=sizeof(long)`.
+      >
+      > Theoretically a compiler could make`short`,`char`, and`long`all the same number of bits. I know of some that[actually did that](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models)for all those types save`char`.
+      >
+      > This is why C now defines types like`uint16_t`and`uint32_t`. If you need a specific size, you are supposed to use one of those.
+
+      [https://stackoverflow.com/questions/6155784/range-of-values-in-c-int-and-long-32-64-bits](https://stackoverflow.com/questions/6155784/range-of-values-in-c-int-and-long-32-64-bits)
+
+      * 그럼 c, java, c++ ? 데이터 타입있는 언어들은 다 각기 다른가? 
+
+      * 읽어보기 
+
+        * [Java Primitive Data Types. Size, Range and Default Value of Basic Data Types](http://cs-fundamentals.com/java-programming/java-primitive-data-types.php)
+
+
+
+반복문
+
+if문이랑 while문 구조 비교해볼 수 있구나, 공통점과 차이점
+
+펜이랑 종이로 돌아가는 순서 꼭꼭 그려보기! \(메모리\)
+
+
+
+```java
+
+public class WhileEx {
+	public static void main(String[] args){
+		int i = 0;
+		while (i < 5){
+			System.out.println("정수: " + i);
+			++i;
+		}
+	}
+}
+```
+
+위 코드 손으로 그려서 실행 순서 설명해보기
+
+
+
+while문은 false 나올 때까지 돌리게 됨 ㄷㄷ 
+
+```java
+
+public class WhileEx {
+	public static void main(String[] args){
+		int i = 3;
+		while (i < 5){ //while 자리에 if도 써보자
+			System.out.println("5보다 작네? ㅋㅋ");
+			//한번 출력하고 종료되는 줄 알았더니, 종료 조건이 없으므로 무한 반복이 되는구나.
+			
+		}
+	}
+}
+```
+
+![](/assets/import3.png)![](/assets/day003import.png)
+
+while에서는 반복계수 중요중요
 
 
 
