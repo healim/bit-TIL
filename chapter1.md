@@ -1,3 +1,75 @@
-# First Chapter
+# Day003
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+**제어문 = 선택문이라고도 함**
+
+**if\(만약~라면\)는 단독 사용 가능, else\(그밖에\)는 불가능**
+
+**문장 한 줄만 있는게 단일문장**
+
+**단일문장**
+
+**복합문**
+
+
+
+**\`\`\`java**
+
+**if \(조건문\)**
+
+**실행문**
+
+**  
+**
+
+**if \(조건문\) {**
+
+**//{} 중괄호로 블록 설정, 단일문 대신 들어갈 수 있음**
+
+**실행문1**
+
+**실행문1**
+
+**}**
+
+**\`\`\`**
+
+**\`\`\`java**
+
+**if \(condition\)**
+
+
+
+**exp1 //원래 이렇게 줄 띠고 쓰면 if가 아니라 그냥 실행문으로 판단되었는데 업데이트 되어서인지 if 뒤에 바로 안 붙여도 if에 붙은걸로 판단된다는**
+
+**\`\`\`**
+
+![](https://lh4.googleusercontent.com/3HeJvNjP0f0wtRMnLsr4a155T67VenHER_ttL7-o-8Lz6sef30OJsy1EXWn5X8dNZ_QRlnkosma2jZ4iXITCwhXWHoX7gz_DNO0kSfqhVGEYoPC5ktjJzT5OoYZaNbuC_x7GCuIM)
+
+**  
+**
+
+**메모리 어떤 식으로 동작해서 계산 되는가, 컴파일 과정**
+
+**if 조건문 안 맞으면 바로 {} 브라켓 밖으로 이동함 \(체크표시 된 곳, 10번 라인 \*11번 라인이 아니다\*\)**
+
+
+
+**현재 스코어 몇이냐~ cpu가 물어봄**
+
+**메모리에 담긴 score값 83 가져와서 if 조건문에 집어 넣음, 판단해보니 결과값 False값 나옴**
+
+
+
+**모든 조건문은 결과값 반드시 True 또는 False로 나오게 됨**
+
+**if - else로 썼는데, 위에 사진처럼 if - if 로도 쓸 수 있지!**
+
+**  
+**
+
+**  
+**
+
+**  
+**
+
