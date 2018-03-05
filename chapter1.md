@@ -188,8 +188,6 @@ public class SwitchEx {
 
 많음 \(걸리는게 없으니까 위에는 안 걸치고 바로 default로 감\)
 
-
-
 if 대신 switch 쓰기
 
 ```java
@@ -197,161 +195,155 @@ import java.util.Scanner;
 
 public class SwitchEx {
 
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		
-		int number;
-		int numberCond;
-		
-		System.out.println("정수를 입력하시오:");
-		number = input.nextInt();
-		numberCond = number / 100; 
-		
-		switch (numberCond) {
-		case 0:
-			System.out.println("미꾸스몰");
-			break;
-		case 1:
-			System.out.println("미꾸미디움");
-			break;
-//		case 2:
-//			System.out.println("미꾸라지");
-//			break;
-//	
-		default:
-			System.out.println("미꾸라지");
-			break;
-			
-		}
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-	}
+        int number;
+        int numberCond;
+
+        System.out.println("정수를 입력하시오:");
+        number = input.nextInt();
+        numberCond = number / 100; 
+
+        switch (numberCond) {
+        case 0:
+            System.out.println("미꾸스몰");
+            break;
+        case 1:
+            System.out.println("미꾸미디움");
+            break;
+//        case 2:
+//            System.out.println("미꾸라지");
+//            break;
+//    
+        default:
+            System.out.println("미꾸라지");
+            break;
+
+        }
+
+    }
 
 }
 ```
-
-
 
 ```java
 import java.util.Scanner;
 
 public class SwitchEx {
 
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		
-		//문1.
-		int number;
-		
-		System.out.println("1부터 10사이의 수를 입력하세요.: ");
-		number = input.nextInt();
-	
-		// 문1-1. Switch 문으로 구현하기
-		switch (number) {
-		case 1:
-			System.out.println("Bananas");
-			break;
-		case 2:
-			System.out.println("Oranges");
-			break;
-		case 3:
-			System.out.println("Pears");
-		case 4:
-			System.out.println("Apples");
-		case 5:
-			System.out.println("Plums");
-			break;
-		case 6:
-			System.out.println("Pineapples");
-			break;
-		case 7:
-			break;
-		default:
-			System.out.println("Nuts");
-			break;
-			
-		}
-		
-		// 문1-2. If문으로 구현하기
-		if (number <= 1 && number > 0)
-			System.out.println("Bananas");
-		else if (number <= 2)
-			System.out.println("Oranges");
-		else if (number <= 3){
-			System.out.println("Pears \nApples \nPlums");
-		}
-		else if (number <= 4){
-			System.out.println("Apples \nPlums");
-		}
-		else if (number <= 5)
-			System.out.println("Plums");
-		else if (number <= 6)
-			System.out.println("Pineapples");
-		else if (number <= 7 && number < 8)
-			System.out.println("");
-		else
-			System.out.println("Nuts");
-		
-		
-		//문2. 난수 생성기 사용
-		int ranNum = (int)(Math.random()*10)+1;
-		System.out.printf("생성된 난수 : %d \n", ranNum);
-		
-		// 문2-1. Switch 문으로 구현하기
-		switch (ranNum) {
-		case 1:
-			System.out.println("Bananas");
-			break;
-		case 2:
-			System.out.println("Oranges");
-			break;
-		case 3:
-			System.out.println("Pears");
-		case 4:
-			System.out.println("Apples");
-		case 5:
-			System.out.println("Plums");
-			break;
-		case 6:
-			System.out.println("Pineapples");
-			break;
-		case 7:
-			break;
-		default:
-			System.out.println("Nuts");
-			break;
-			
-		}
-		
-		// 문2-2. If문으로 구현하기
-		if (ranNum <= 1 && ranNum > 0)
-			System.out.println("Bananas");
-		else if (ranNum <= 2)
-			System.out.println("Oranges");
-		else if (ranNum <= 3){
-			System.out.println("Pears \nApples \nPlums");
-		}
-		else if (ranNum <= 4){
-			System.out.println("Apples \nPlums");
-		}
-		else if (ranNum <= 5)
-			System.out.println("Plums");
-		else if (ranNum <= 6)
-			System.out.println("Pineapples");
-		else if (ranNum <= 7 && ranNum < 8)
-			System.out.println("");
-		else
-			System.out.println("Nuts");
-		
-		
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-	}
+        //문1.
+        int number;
+
+        System.out.println("1부터 10사이의 수를 입력하세요.: ");
+        number = input.nextInt();
+
+        // 문1-1. Switch 문으로 구현하기
+        switch (number) {
+        case 1:
+            System.out.println("Bananas");
+            break;
+        case 2:
+            System.out.println("Oranges");
+            break;
+        case 3:
+            System.out.println("Pears");
+        case 4:
+            System.out.println("Apples");
+        case 5:
+            System.out.println("Plums");
+            break;
+        case 6:
+            System.out.println("Pineapples");
+            break;
+        case 7:
+            break;
+        default:
+            System.out.println("Nuts");
+            break;
+
+        }
+
+        // 문1-2. If문으로 구현하기
+        if (number <= 1 && number > 0)
+            System.out.println("Bananas");
+        else if (number <= 2)
+            System.out.println("Oranges");
+        else if (number <= 3){
+            System.out.println("Pears \nApples \nPlums");
+        }
+        else if (number <= 4){
+            System.out.println("Apples \nPlums");
+        }
+        else if (number <= 5)
+            System.out.println("Plums");
+        else if (number <= 6)
+            System.out.println("Pineapples");
+        else if (number <= 7 && number < 8)
+            System.out.println("");
+        else
+            System.out.println("Nuts");
+
+
+        //문2. 난수 생성기 사용
+        int ranNum = (int)(Math.random()*10)+1;
+        System.out.printf("생성된 난수 : %d \n", ranNum);
+
+        // 문2-1. Switch 문으로 구현하기
+        switch (ranNum) {
+        case 1:
+            System.out.println("Bananas");
+            break;
+        case 2:
+            System.out.println("Oranges");
+            break;
+        case 3:
+            System.out.println("Pears");
+        case 4:
+            System.out.println("Apples");
+        case 5:
+            System.out.println("Plums");
+            break;
+        case 6:
+            System.out.println("Pineapples");
+            break;
+        case 7:
+            break;
+        default:
+            System.out.println("Nuts");
+            break;
+
+        }
+
+        // 문2-2. If문으로 구현하기
+        if (ranNum <= 1 && ranNum > 0)
+            System.out.println("Bananas");
+        else if (ranNum <= 2)
+            System.out.println("Oranges");
+        else if (ranNum <= 3){
+            System.out.println("Pears \nApples \nPlums");
+        }
+        else if (ranNum <= 4){
+            System.out.println("Apples \nPlums");
+        }
+        else if (ranNum <= 5)
+            System.out.println("Plums");
+        else if (ranNum <= 6)
+            System.out.println("Pineapples");
+        else if (ranNum <= 7 && ranNum < 8)
+            System.out.println("");
+        else
+            System.out.println("Nuts");
+
+
+
+    }
 
 }
 ```
-
-
-
-
 
 
 
