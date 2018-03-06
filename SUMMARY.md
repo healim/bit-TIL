@@ -7,4 +7,5 @@
 * [Day002-review](day002-review.md)
 * [Day003](chapter1.md)
 * [Day003-review](day003-review.md)
+* [Day004](day004.md)
 
