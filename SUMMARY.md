@@ -14,4 +14,6 @@
 * [Day008](day008.md)
 * [Day009](day009.md)
 * [Day010](day010.md)
+* [Day011](day011.md)
+* Day012
 
