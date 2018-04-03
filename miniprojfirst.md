@@ -2,8 +2,6 @@
 
 영화 + 혼맥 -&gt; 편의점 맥주 추천
 
-
-
 #### ER 모델![](/assets/proj-first-er-import.png)
 
 #### 작동 예
