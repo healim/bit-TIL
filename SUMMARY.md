@@ -31,4 +31,5 @@
 * [mini-proj\_first](miniprojfirst.md)
 * [Day025-080404](day025-080404.md)
 * [Day026](day026.md)
+* [Day027](day027.md)
 
